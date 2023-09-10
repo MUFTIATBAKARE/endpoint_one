@@ -25,7 +25,7 @@ app.get("/api", (req, res) => {
     }
 
     // Format the UTC time
-    const formattedUtcTime = currentUtcTime.format("HH:mm:ssZ");
+    const formattedUtcTime = currentUtcTime.format('YYYY-MM-DDTHH:mm:ssZ');
 
     // Construct the GitHub file URL
     const githubRepo = "MUFTIATBAKARE/endpoint_one";

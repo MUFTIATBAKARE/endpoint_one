@@ -9,20 +9,7 @@ app.get("/api", (req, res) => {
     const track = req.query.track;
     const currentDay = day().format("dddd");
     // Get the current time in UTC
-    const currentUtcTime = moment().tz("UTC");
-
-    // Get the current UTC offset in minutes
-    const utcOffsetMinutes = currentUtcTime.utcOffset();
-
-    // Check if the UTC offset is within +/-2 minutes
-    const isValidUtcOffset = Math.abs(utcOffsetMinutes) <= 2;
-
-    if (!isValidUtcOffset) {
-      return res.status(400).json({
-        error: "Invalid UTC Offset",
-        status_code: 400,
-      });
-    }
+    const currentUtcTime = moment().utc();
 
     // Format the UTC time
     const formattedUtcTime = currentUtcTime.format('YYYY-MM-DDTHH:mm:ssZ');

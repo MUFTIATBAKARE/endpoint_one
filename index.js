@@ -1,6 +1,6 @@
 const express = require("express");
 const moment = require("moment");
-const github = require("github");
+const octokit = require("@octokit/rest");
 const app = express();
 
 app.get("/api", (req, res) => {
@@ -9,7 +9,7 @@ app.get("/api", (req, res) => {
 
   const currentDay = moment().weekday();
   const utcTime = moment().format("HH:mm:ssZ");
-  const githubFileUrl = github.fileUrl(
+  const githubFileUrl = octokit.fileUrl(
     "MUFTIATBAKARE",
     "endpoint_one",
     "main",

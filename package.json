@@ -1,0 +1,25 @@
+{
+  "name": "backend_stageone",
+  "version": "1.0.0",
+  "description": "create an api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MUFTIATBAKARE/endpoint_one.git"
+  },
+  "author": "muftiat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MUFTIATBAKARE/endpoint_one/issues"
+  },
+  "homepage": "https://github.com/MUFTIATBAKARE/endpoint_one#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "@octokit/rest": "^18.0.0",
+    "moment": "^2.29.4"
+  }
+}

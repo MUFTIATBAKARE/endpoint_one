@@ -14,6 +14,9 @@ app.get("/api", (req, res) => {
     // Format the UTC time
     const formattedUtcTime = currentUtcTime.format('YYYY-MM-DDTHH:mm:ssZ');
 
+    // Log the UTC time
+    console.log("UTC time:", formattedUtcTime);
+
     // Construct the GitHub file URL
     const githubRepo = "MUFTIATBAKARE/endpoint_one";
     const githubFilePath = "main/index.js";
@@ -46,3 +49,4 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(3000, () => console.log("API is running..."));
+      

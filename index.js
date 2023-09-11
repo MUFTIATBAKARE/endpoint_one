@@ -12,12 +12,10 @@ app.get("/api", (req, res) => {
     const currentUtcTime = moment().utc();
 
     // Format the UTC time
-    const formattedUtcTime = currentUtcTime.format("YYYY-MM-DDTHH:mm:ss", {
-      tz: "UTC",
-    });
+    const formattedUtcTime = currentUtcTime.format("YYYY-MM-DDTHH:mm:ss");
 
     // Log the UTC time
-    console.log("UTC time:", formattedUtcTime);
+    const utcTime = `${formattedUtcTime}Z`;
 
     // Construct the GitHub file URL
     const githubRepo = "MUFTIATBAKARE/endpoint_one";
@@ -31,7 +29,7 @@ app.get("/api", (req, res) => {
     res.status(statusCode).json({
       slack_name: slackName,
       current_day: currentDay,
-      utc_time: formattedUtcTime,
+      utc_time: utcTime,
       track: track,
       github_file_url: githubFileUrl,
       github_repo_url: githubRepoUrl,

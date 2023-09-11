@@ -12,7 +12,9 @@ app.get("/api", (req, res) => {
     const currentUtcTime = moment().utc();
 
     // Format the UTC time
-    const formattedUtcTime = currentUtcTime.format('YYYY-MM-DDTHH:mm:ssZ');
+    const formattedUtcTime = currentUtcTime.format("YYYY-MM-DDTHH:mm:ss", {
+      tz: "UTC",
+    });
 
     // Log the UTC time
     console.log("UTC time:", formattedUtcTime);

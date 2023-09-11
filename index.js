@@ -1,6 +1,6 @@
 const express = require("express");
 const day = require("moment");
-const moment = require("moment-timezone"); // Import moment-timezone
+const moment = require("moment"); // Import moment-timezone
 const app = express();
 
 app.get("/api", (req, res) => {
